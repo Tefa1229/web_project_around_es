@@ -25,4 +25,4 @@ Ya teniendo como base lo anterior, lo que realizamos fue la implementación de P
 Todo esto se implementó con arrays, eventos y funciones en JavaScript, aportando dinamismo y una experiencia más fluida para el usuario.
 
 Puedes ver el resultado en GitHub Pages:
-https://tefa1229.github.io/web_project_around/
+https://tefa1229.github.io/web_project_around_es/
