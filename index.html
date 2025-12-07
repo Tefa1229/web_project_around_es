@@ -1,230 +1,173 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-    <title>Around The U.S.</title>
-    <link href="./pages/index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Estefania Vallejo" />
+    <meta name="keywords" lang="en-us" content="Around, US, Artist" />
+    <meta name="description" content="Around Tripleten" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around</title>
   </head>
-  <body class="page">
-    <div class="page__content">
-      <header class="header page__section">
-        <img
-          alt="Logotipo Around The U.S."
-          class="logo header__logo"
-          src="./images/logo.svg"
-        />
+  <body>
+    <div class="page">
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="Around US" />
       </header>
       <main class="content">
-        <section class="profile page__section">
-          <img class="profile__image" src="./images/avatar.jpg" alt="Avatar" />
+        <section class="profile">
+          <img
+            class="profile__avatar"
+            src="./images/profile.jpg"
+            alt="User Avatar"
+          />
           <div class="profile__info">
-            <h1 class="profile__title">Jacques Cousteau</h1>
-            <button
-              aria-label="Editar perfil"
-              class="profile__edit-button"
-              type="button"
-            ></button>
-            <p class="profile__description">Explorador</p>
+            <div class="profile__info-container">
+              <h1 class="profile__name">Estefania Vallejo</h1>
+              <button
+                class="profile__button profile__edit-button"
+                type="button"
+                aria-label="Edit profile"
+              >
+                <img
+                  class="profile__icon-edit"
+                  src="./images/edit.svg"
+                  alt="Icon edit"
+                />
+              </button>
+            </div>
+            <p class="profile__about">Graphic Designer</p>
           </div>
           <button
-            aria-label="Agregar tarjeta"
-            class="profile__add-button"
+            class="profile__button profile__add-button"
             type="button"
-          ></button>
+            aria-label="Add"
+          >
+            <img src="./images/plus.svg" alt="add icon" />
+          </button>
         </section>
-        <section class="cards page__section">
-          <ul class="cards__list">
-            <li class="card">
-              <img
-                class="card__image"
-                src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
-                alt="Valle de Yosemite"
-              />
+        <section class="gallery">
+          <div class="gallery__container">
+            <!-- Aquí van las tarjetas creadas dinámicamente -->
+          </div>
+          <template id="card-template">
+            <div class="gallery__card">
               <button
-                aria-label="Eliminar tarjeta"
-                class="card__delete-button"
+                class="gallery__delete-button"
                 type="button"
-              ></button>
-              <div class="card__description">
-                <h2 class="card__title">Valle de Yosemite</h2>
+                aria-label="Delete"
+              >
+                <img
+                  class="gallery__icon-delete"
+                  src="./images/delete.svg"
+                  alt="Like heart icon"
+                />
+              </button>
+              <img class="gallery__image" src="" alt="" />
+              <div class="gallery__description">
+                <h2 class="gallery__title"></h2>
                 <button
-                  aria-label="Botón Me gusta"
-                  class="card__like-button"
+                  class="gallery__like-button"
                   type="button"
-                ></button>
+                  aria-label="Like"
+                >
+                  <img
+                    class="gallery__icon-like"
+                    src="./images/like.svg"
+                    alt="Like heart icon"
+                  />
+                </button>
               </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
-                alt="Lago Louise"
-              />
-              <button
-                aria-label="Eliminar tarjeta"
-                class="card__delete-button"
-                type="button"
-              ></button>
-              <div class="card__description">
-                <h2 class="card__title">Lago Louise</h2>
-                <button
-                  aria-label="Botón Me gusta"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg"
-                alt="Montañas Calvas"
-              />
-              <button
-                aria-label="Eliminar tarjeta"
-                class="card__delete-button"
-                type="button"
-              ></button>
-              <div class="card__description">
-                <h2 class="card__title">Montañas Calvas</h2>
-                <button
-                  aria-label="Botón Me gusta"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
-                alt="Latemar"
-              />
-              <button
-                aria-label="Eliminar tarjeta"
-                class="card__delete-button"
-                type="button"
-              ></button>
-              <div class="card__description">
-                <h2 class="card__title">Latemar</h2>
-                <button
-                  aria-label="Botón Me gusta"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg"
-                alt="Parque Nacional de la Vanoise"
-              />
-              <button
-                aria-label="Eliminar tarjeta"
-                class="card__delete-button"
-                type="button"
-              ></button>
-              <div class="card__description">
-                <h2 class="card__title">Parque Nacional de la Vanoise</h2>
-                <button
-                  aria-label="Botón Me gusta"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
-                alt="Lago di Braies"
-              />
-              <button
-                aria-label="Eliminar tarjeta"
-                class="card__delete-button"
-                type="button"
-              ></button>
-              <div class="card__description">
-                <h2 class="card__title">Lago di Braies</h2>
-                <button
-                  aria-label="Botón Me gusta"
-                  class="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </template>
         </section>
       </main>
-      <footer class="footer page__section">
-        <p class="footer__copyright">© 2025 Around The U.S.</p>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2025 Tefa Vallejo</p>
       </footer>
-      <div class="popup" id="edit-popup">
-        <div class="popup__content">
-          <button
-            aria-label="Cerrar ventana emergente"
-            class="popup__close"
-            type="button"
-          ></button>
-          <h3 class="popup__title">Editar perfil</h3>
-          <form class="popup__form" id="edit-profile-form">
+      <!--modal-->
+      <section id="popup__profile" class="popup">
+        <div class="popup__container">
+          <button class="popup__close-button">
+            <img src="./images/closeIcon.svg" alt="" />
+          </button>
+          <h2 class="popup__title">Editar perfil</h2>
+          <form class="popup__form" name="edit-profile" novalidate>
             <input
-              class="popup__input popup__input_type_name"
-              name="name"
+              type="text"
+              class="popup__input"
+              id="fname"
+              name="fname"
               placeholder="Nombre"
-              type="text"
+              minlength="2"
+              maxlength="40"
+              required
             />
+            <span id="error-fname" class=""></span>
             <input
-              class="popup__input popup__input_type_description"
-              name="description"
+              type="text"
+              class="popup__input"
+              id="aboutMe"
+              name="aboutMe"
               placeholder="Acerca de mí"
-              type="text"
+              required
             />
-            <button class="button popup__button" type="submit">Guardar</button>
+            <span id="error-aboutMe" class=""></span>
+            <button class="popup__button popup__button_save" type="submit">
+              Guardar
+            </button>
           </form>
         </div>
-      </div>
-      <div class="popup" id="new-card-popup">
-        <div class="popup__content">
-          <button
-            aria-label="Cerrar ventana emergente"
-            class="popup__close"
-            type="button"
-          ></button>
-          <h3 class="popup__title">Nuevo lugar</h3>
-          <form class="popup__form" id="new-card-form">
+      </section>
+      <!--fin modal-->
+      <!--PopUp nueva tarjeta-->
+      <section id="popup__new-card" class="popup">
+        <div class="popup__container">
+          <button class="popup__close-button">
+            <img src="./images/closeIcon.svg" alt="" />
+          </button>
+          <h2 class="popup__title">Nuevo lugar</h2>
+          <form class="popup__form" name="new-card">
             <input
-              class="popup__input popup__input_type_card-name"
-              name="place-name"
+              class="popup__input"
+              type="text"
+              id="title"
+              name="title"
               placeholder="Título"
+              minlength="2"
+              maxlength="30"
               required
-              type="text"
             />
+            <span id="error-title" class=""></span>
             <input
-              class="popup__input popup__input_type_url"
-              name="link"
-              placeholder="Enlace a la imagen"
-              required
+              class="popup__input"
               type="url"
+              id="imageLink"
+              name="imageLink"
+              placeholder="Enlace de la imagen"
+              required
             />
-            <button class="button popup__button" type="submit">Crear</button>
+            <span id="error-imageLink" class=""></span>
+            <button class="popup__button popup__button_save" type="submit">
+              Crear
+            </button>
           </form>
         </div>
-      </div>
-      <div class="popup" id="image-popup">
-        <div class="popup__content popup__content_content_image">
-          <button
-            aria-label="Cerrar ventana emergente"
-            class="popup__close"
-            type="button"
-          ></button>
-          <img alt="" class="popup__image" src="#" />
+      </section>
+      <!--fin del popUp-->
+      <!--PopUp imagen-->
+      <section id="popup__image" class="popup">
+        <div class="popup__container-images">
+          <button class="popup__close-button">
+            <img src="./images/closeIcon.svg" alt="" />
+          </button>
+          <img class="popup__images" src="./images/colorado.jpg" alt="" />
           <p class="popup__caption"></p>
         </div>
-      </div>
+      </section>
     </div>
+    <script type="module" src="./scripts/Card.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

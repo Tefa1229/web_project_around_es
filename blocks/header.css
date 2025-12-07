@@ -1,25 +1,16 @@
 .header {
-  min-height: 120px;
-  font-family: "Inter", Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  max-width: calc(100% - 400px);
+  margin: 45px auto 40px;
+  padding-bottom: 41px;
+  border-bottom: 1px solid #545454;
 }
-
-.header__logo {
-  width: 173px;
-  height: 33px;
-  object-fit: contain;
-}
-
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 768px) {
   .header {
-    min-height: 85px;
+    max-width: calc(100% - 200px);
   }
-
-  .header__logo {
-    width: 126px;
-    height: 24px;
-    margin: 0 0 0 7px;
+}
+@media screen and (max-width: 430px) {
+  .header {
+    max-width: calc(100% - 40px);
   }
 }
