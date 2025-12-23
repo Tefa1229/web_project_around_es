@@ -69,33 +69,12 @@ class FormValidator {
       });
     });
   }
+  resetValidation() {
+    this._inputList.forEach((input) => {
+      this._hideInputError(input);
+    });
+    this._toggleButtonState();
+  }
 }
 //final
-export function enableValidation(config) {
-  const formList = Array.from(document.querySelectorAll(config.formSelector));
-  formList.forEach((form) => {
-    const formValidator = new FormValidator(config, form);
-    formValidator.setEventListeners();
-  });
-}
-// Reset validation function
-export function resetValidation(formElement, config) {
-  const inputList = Array.from(
-    formElement.querySelectorAll(config.inputSelector)
-  );
-  const buttonElement = formElement.querySelector(config.submitButtonSelector);
-
-  // clear errors
-  inputList.forEach((input) => {
-    const errorElement = formElement.querySelector(`#error-${input.name}`);
-    if (errorElement) {
-      errorElement.classList.remove(config.errorClass);
-      errorElement.textContent = "";
-      input.classList.remove(config.inputErrorClass);
-    }
-    input.value = "";
-  });
-  // Deshabilitar botón
-  buttonElement.disabled = true;
-  buttonElement.classList.add(config.inactiveButtonClass);
-}
+export default FormValidator;
