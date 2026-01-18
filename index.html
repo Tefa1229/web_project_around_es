@@ -7,20 +7,24 @@
     <meta name="keywords" lang="en-us" content="Around, US, Artist" />
     <meta name="description" content="Around Tripleten" />
     <link rel="icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./page/index.css" />
+    <link rel="stylesheet" href="../src/page/index.css" />
     <title>Around</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="Around US" />
+        <img
+          class="header__logo"
+          src="../src/images/logo.svg"
+          alt="Around US"
+        />
       </header>
       <main class="content">
         <section class="profile">
           <div class="profile__avatar-container">
             <img
               class="profile__avatar"
-              src="./images/profile.jpg"
+              src="../src/images/profile.jpg"
               alt="User Avatar"
             />
             <button
@@ -30,7 +34,7 @@
             >
               <img
                 class="profile__avatar-edit-icon"
-                src="./images/edit.svg"
+                src="../src/images/edit.svg"
                 alt="Editar avatar"
               />
             </button>
@@ -46,7 +50,7 @@
               >
                 <img
                   class="profile__icon-edit"
-                  src="./images/edit.svg"
+                  src="../src/images/edit.svg"
                   alt="Icon edit"
                 />
               </button>
@@ -58,7 +62,7 @@
             type="button"
             aria-label="Add"
           >
-            <img src="./images/plus.svg" alt="add icon" />
+            <img src="../src/images/plus.svg" alt="add icon" />
           </button>
         </section>
         <section class="gallery">
@@ -74,7 +78,7 @@
               >
                 <img
                   class="gallery__icon-delete"
-                  src="./images/delete.svg"
+                  src="../src/images/delete.svg"
                   alt="Like heart icon"
                 />
               </button>
@@ -88,7 +92,7 @@
                 >
                   <img
                     class="gallery__icon-like"
-                    src="./images/like.svg"
+                    src="../src/images/like.svg"
                     alt="Like heart icon"
                   />
                 </button>
@@ -104,7 +108,7 @@
       <section id="popup__profile" class="popup">
         <div class="popup__container">
           <button class="popup__close-button">
-            <img src="./images/closeIcon.svg" alt="" />
+            <img src="../src/images/closeIcon.svg" alt="" />
           </button>
           <h2 class="popup__title">Editar perfil</h2>
           <form class="popup__form" name="edit-profile" novalidate>
@@ -139,7 +143,7 @@
       <section id="popup__new-card" class="popup">
         <div class="popup__container">
           <button class="popup__close-button">
-            <img src="./images/closeIcon.svg" alt="" />
+            <img src="../src/images/closeIcon.svg" alt="" />
           </button>
           <h2 class="popup__title">Nuevo lugar</h2>
           <form class="popup__form" name="new-card">
@@ -174,9 +178,9 @@
       <section id="popup__image" class="popup">
         <div class="popup__container-images">
           <button class="popup__close-button">
-            <img src="./images/closeIcon.svg" alt="" />
+            <img src="../src/images/closeIcon.svg" alt="" />
           </button>
-          <img class="popup__images" src="./images/colorado.jpg" alt="" />
+          <img class="popup__images" src="../src/images/colorado.jpg" alt="" />
           <p class="popup__caption"></p>
         </div>
       </section>
@@ -185,7 +189,7 @@
       <div class="popup" id="popup__delete-card">
         <div class="popup__container">
           <button class="popup__close-button">
-            <img src="./images/closeIcon.svg" alt="" />
+            <img src="../src/images/closeIcon.svg" alt="" />
           </button>
           <h3 class="popup__title">¿Estás seguro/a?</h3>
           <form class="popup__form" name="confirm-form">
@@ -200,7 +204,7 @@
       <div class="popup" id="popup__avatar">
         <div class="popup__container">
           <button class="popup__close-button">
-            <img src="./images/closeIcon.svg" alt="" />
+            <img src="../src/images/closeIcon.svg" alt="" />
           </button>
           <h2 class="popup__title">Cambiar foto de perfil</h2>
           <form class="popup__form" name="avatar-form" novalidate>
@@ -223,7 +227,7 @@
       </div>
       <!-- Fin del popup de avatar -->
     </div>
-    <script type="module" src="./components/Card.js"></script>
-    <script type="module" src="./page/index.js"></script>
+    <script type="module" src="../src/components/Card.js"></script>
+    <script type="module" src="../src/page/index.js"></script>
   </body>
 </html>
