@@ -26,5 +26,9 @@ Todo esto se implementó con arrays, eventos y funciones en JavaScript, aportand
 
 Se ha organizado el archivo para que su funcionalidad sea independiente mediante una refactorización con POO, creando clases correspondientes a cada funcionalidad. Asimismo, se utilizó un acoplamiento débil entre los componentes.
 
+Se ha implementado el código para que funcione con el servidor y no con información proporcionada directamente, volviéndolo más dinámico y accesible para todos los desarrolladores que deseen manejar el proyecto. Con esto, se realizó un manejo de promesas usando return fetch en cada método y se obtiene la respuesta del servidor a través de la API proporcionada.
+
+Las funcionalidades como eliminar y me gusta se implementaron correctamente para manejar los datos del servidor según el ID. Asimismo, se realizaron mejoras en la experiencia de usuario en los botones y en los pop-ups, con su respectivo despliegue.
+
 Puedes ver el resultado en GitHub Pages:
 https://tefa1229.github.io/web_project_around_es/

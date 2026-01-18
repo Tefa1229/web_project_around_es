@@ -31,6 +31,14 @@ export default class PopupWithForm extends Popup {
       this._handleFormSubmit(this._getInputValues());
     });
   }
+  renderLoading(isLoading, loadingText = "Guardando...") {
+    const submitButton = this._form.querySelector(".popup__button");
+    if (isLoading) {
+      submitButton.textContent = loadingText;
+    } else {
+      submitButton.textContent = "Guardar";
+    }
+  }
 
   close() {
     super.close();
